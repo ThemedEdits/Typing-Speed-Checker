@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeMaster | Typing Speed Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="fas fa-keyboard"></i>
+          <h1>TypeMaster</h1>
+        </div>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </header>
+
+      <main>
+        <div class="stats-container">
+          <div class="stat-box">
+            <i class="fas fa-tachometer-alt"></i>
+            <div>
+              <span id="wpm">0</span>
+              <small>WPM</small>
+            </div>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-clock"></i>
+            <div>
+              <span id="time">60</span>
+              <small>Seconds</small>
+            </div>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <span id="accuracy">0</span>
+              <small>Accuracy</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-display" id="text-display">
+          <p id="sample-text">Loading sample text...</p>
+        </div>
+
+        <div class="input-area">
+          <textarea
+            id="user-input"
+            placeholder="Start typing here..."
+          ></textarea>
+          <button id="restart-btn"><i class="fas fa-redo"></i> Restart</button>
+        </div>
+
+        <div class="result-container hidden" id="result-container">
+          <h2>Your Results</h2>
+          <div class="result-grid">
+            <div class="result-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <div>
+                <span id="final-wpm">0</span>
+                <small>Words Per Minute</small>
+              </div>
+            </div>
+            <div class="result-item">
+              <i class="fas fa-keyboard"></i>
+              <div>
+                <span id="final-accuracy">0</span>
+                <small>Accuracy</small>
+              </div>
+            </div>
+            <div class="result-item">
+              <i class="fas fa-bolt"></i>
+              <div>
+                <span id="final-keystrokes">0</span>
+                <small>Keystrokes</small>
+              </div>
+            </div>
+            <div class="result-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <span id="final-cpm">0</span>
+                <small>Characters Per Minute</small>
+              </div>
+            </div>
+          </div>
+          <button id="try-again-btn">
+            <i class="fas fa-redo"></i> Try Again
+          </button>
+        </div>
+      </main>
+
+      <footer>
+        <p>Made with <i class="fas fa-heart"></i> by TypeMaster</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
